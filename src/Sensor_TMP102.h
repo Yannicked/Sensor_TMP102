@@ -47,7 +47,7 @@ class Sensor_TMP102
 			RATE_1HZ = 1,
 			RATE_4HZ = 4,
 			RATE_8HZ = 8
-		}
+		};
 
 		Sensor_TMP102(void);
 
