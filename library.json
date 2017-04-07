@@ -1,0 +1,22 @@
+{
+  "name": "Sensor_TMP102",
+  "keywords": "iic, i2c, temperature, tmp102, ti, Texas, Instruments",
+  "description": "Platformio Library for the Texas Instruments TMP102",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/milesburton/Arduino-Temperature-Control-Library.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Yannick de Jong",
+      "email": "yannickdejong@zebry.nl",
+      "url": "https://zebry.nl",
+      "maintainer": true
+    }
+  ],
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
