@@ -29,7 +29,7 @@
 
 #include "Sensor_TMP102.h"
 
-Sensor_TMP102::TMP102()
+Sensor_TMP102::Sensor_TMP102()
 {
 	
 }
@@ -48,7 +48,7 @@ uint16_t Sensor_TMP102::getConfig() {
 	Wire.write((uint8_t) CONF_REG_ADDR);
 	Wire.endTransmission();
 	
-	Wire.requestFrom((uint8_t) _i2caddr, 2);
+	Wire.requestFrom((uint8_t) _i2caddr, (uint8_t) 2);
 	
 	return (Wire.read() << 8) | Wire.read();
 }
@@ -106,7 +106,7 @@ float Sensor_TMP102::readTemperature()
 	Wire.write((uint8_t) TEMP_REG_ADDR);
 	Wire.endTransmission();
 	
-	Wire.requestFrom((uint8_t) _i2caddr, 2);
+	Wire.requestFrom((uint8_t) _i2caddr, (uint8_t) 2);
 	
 	int16_t temp_raw;
 	

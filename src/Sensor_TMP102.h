@@ -36,7 +36,7 @@ enum
 	CONF_REG_ADDR = 0b01,
 	TLOW_REG_ADDR = 0b10,
 	THIG_REG_ADDR = 0b11
-}
+};
 
 class Sensor_TMP102
 {
