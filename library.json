@@ -1,5 +1,5 @@
 {
-  "name": "Sensor_TMP102",
+  "name": "Sensor TMP102",
   "keywords": "iic, i2c, temperature, tmp102, ti, Texas, Instruments",
   "description": "Platformio Library for the Texas Instruments TMP102",
   "repository":
