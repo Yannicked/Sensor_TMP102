@@ -5,7 +5,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/milesburton/Arduino-Temperature-Control-Library.git"
+    "url": "https://github.com/Yannicked/Sensor_TMP102"
   },
   "authors":
   [
