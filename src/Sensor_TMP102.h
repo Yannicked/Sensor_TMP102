@@ -61,6 +61,7 @@ class Sensor_TMP102
 
 	private:
 		uint8_t _i2caddr;
+		bool _ext_mode;
 		uint16_t getConfig(void);
 		void setConfig(uint16_t config);
 };

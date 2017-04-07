@@ -89,6 +89,8 @@ void Sensor_TMP102::setExtended(bool extended)
 {
 	uint16_t config = getConfig();
 	
+	_ext_mode = extended;
+	
 	if (extended) {
 		config |= (1 << 4);
 	} else {
