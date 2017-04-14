@@ -35,7 +35,11 @@ enum
 	TEMP_REG_ADDR = 0b00,
 	CONF_REG_ADDR = 0b01,
 	TLOW_REG_ADDR = 0b10,
-	THIG_REG_ADDR = 0b11
+	THIG_REG_ADDR = 0b11,
+	CONFIG_CR0 = (1 << 6),
+	CONFIG_CR1 = (1 << 7),
+	CONFIG_SD = (1 << 8),
+	CONFIG_OS = (1 << 13)
 };
 
 class Sensor_TMP102
@@ -46,14 +50,16 @@ class Sensor_TMP102
 			RATE_025HZ = 0,
 			RATE_1HZ = 1,
 			RATE_4HZ = 4,
-			RATE_8HZ = 8
+			RATE_8HZ = 8,
+			RATE_SINGLE_SHOT = 99
 		};
 
 		Sensor_TMP102(void);
+		Sensor_TMP102(bool single_shot);
 
 		bool begin(uint8_t addr);
 
-		void setConversionRate(uint8_t rate = RATE_4HZ);
+		void setConversionRate(conversion_rate rate = RATE_1HZ);
 
 		void setExtended(bool extended);
 
@@ -61,7 +67,7 @@ class Sensor_TMP102
 
 	private:
 		uint8_t _i2caddr;
-		bool _ext_mode;
+		bool _single_shot;
 		uint16_t getConfig(void);
 		void setConfig(uint16_t config);
 };
